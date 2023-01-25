@@ -1,3 +1,5 @@
+/*Pseudo Page*/
+
 body {
     background-color: bisque;
     display: flex;
@@ -67,3 +69,37 @@ section {
     padding: 10px 0;
 
 }
+
+/*Fin Pseudo Page*/
+
+/*Select Page*/
+
+h1 {
+    text-align: center;
+    color: black;
+
+}
+
+/*Fin Select Page*/
+
+
+
+
+
+
+
+
+/*QCM Page*/
+
+.qcm-question {
+    width: 50%;
+}
+
+.qcm-question form .style_btn {
+    padding: 10px 30px;
+    margin-top: 25px;
+    margin-left: -22px;
+}
+
+
+/*Fin QCM Page*/

@@ -27,7 +27,7 @@
             <p class="error"> <strong> Entrez votre pseudo ! </strong> </p>
             <label> pseudo : </label>
             <input type="text" name="name" placeholder="Ex: Goku">
-            <button class="style_btn"> Se connecter </button>
+            <button href="#" class="style_btn"> Se connecter </button>
 
 
 

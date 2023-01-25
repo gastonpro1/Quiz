@@ -1,0 +1,69 @@
+body {
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0, 5px;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+    padding: 20px 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color: bisque;
+}
+
+.menu a {
+    text-decoration: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: brown;
+    padding: 0 20px;
+    transition: 0, 5s;
+}
+
+section {
+    margin-top: 150px;
+    background-color: beige;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.style_btn {
+    padding: 5px 25px;
+    color: white;
+    background-color: orange;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.error {
+    color: red;
+    font-size: 30px;
+}
+
+.pseudo form {
+    display: flex;
+    flex-direction: column;
+}
+
+.pseudo form input {
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid gray;
+    margin: 20px 0;
+    width: 350px;
+    padding: 10px 0;
+
+}

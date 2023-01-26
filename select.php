@@ -36,17 +36,17 @@
     
    
     <div class="col"> 
-    <a href="start.php"> <img src="https://play-lh.googleusercontent.com/BdFeIs3X0TVoIClC-SnQ7EVVttOj66qqx2jOHAz2kC8nVrI5x03FLdRL9XhGYv9hKj0" width="200px"> <br><br></a>
+    <a href="start.php?theme=football&&id=1"> <img src="https://play-lh.googleusercontent.com/BdFeIs3X0TVoIClC-SnQ7EVVttOj66qqx2jOHAz2kC8nVrI5x03FLdRL9XhGYv9hKj0" width="200px"> <br><br></a>
 
     </div>
 
     <div class="col"> 
-    <a href="start.php"> <img src="https://play-lh.googleusercontent.com/cZ3lpffDyhBh8nVCaYcH4iuuRqAqXa6-bxD5-Kqlvi9Jy9mDiAj_kyrjKAZDKkAiBfCZ" width="200px"> <br><br></a>
+    <a href="start.php?theme=musique&&id=2"> <img src="https://play-lh.googleusercontent.com/cZ3lpffDyhBh8nVCaYcH4iuuRqAqXa6-bxD5-Kqlvi9Jy9mDiAj_kyrjKAZDKkAiBfCZ" width="200px"> <br><br></a>
 
     </div>
 
     <div class="col"> 
-    <a href="start.php"> <img src="https://m.media-amazon.com/images/I/81twq1hhVzL.png" width="200px"> <br><br>
+    <a href="start.php?theme=animaux&&id=3"> <img src="https://m.media-amazon.com/images/I/81twq1hhVzL.png" width="200px"> <br><br>
 
     </div>
   

@@ -26,7 +26,7 @@
 
         </h1>
 
-        <a href="question.php?theme=<?= $_GET['theme'] ?>&&id=<?= $_GET['id'] ?>">
+        <a href="question.php?theme=<?= $_GET['theme'] ?>&&idTheme=<?= $_GET['idTheme'] ?>">
             <button style="background-color:rgb(48, 173, 163);" type="button" class="btn btn-primary btn-lg "> Démarrer le Quiz </button> </a>
 
     </section>

@@ -25,14 +25,10 @@
     <!-- Fin menu -->
 
     <section class="pseudo">
-        <form action="" method="POST">
+        <form action="select.php" method="POST">
             <p class="error"> <strong> Entrez votre pseudo ! </strong> </p>
             <label> pseudo : </label>
             <input type="text" name="name" placeholder="Ex: Goku">
-
-
-            
-
             <button href="#" class="style_btn"> Se connecter </button>
         </form>
     </section>

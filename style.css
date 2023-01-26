@@ -94,4 +94,138 @@ h1 {
     margin-left: -22px;
 }
 
+
 /*Fin QCM Page*/
+
+/* Code Gaston Footer */
+@import url('https://fonts.googleapis.com/css2? family= Poppins:ital,wght@0,700;1,400 & display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    background: rgb(227, 148, 0);
+    padding: 2px 0 2px;
+    color: rgb(234, 231, 226);
+    font-size: 13px;
+    line-height: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer .row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer .row .col {
+    flex-basis: 2%;
+    padding: 10px;
+
+}
+
+footer .row .col .logo {
+    color: rgb(232, 225, 225);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 40px;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+footer .row .col h3 {
+    font-size: 1.2em;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+
+}
+
+footer .row .col h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 8px;
+    background: bisque;
+
+}
+
+footer .row .col li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+footer .row .col li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgba(247, 247, 247, 0.916);
+    transition: 3s;
+}
+
+
+footer .row .col p {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgba(253, 253, 253, 0.582);
+    transition: 3s;
+}
+
+footer .row .col li a:hover {
+    color: rgb(52, 104, 104);
+    padding-left: 2px;
+}
+
+footer .row .col:nth-child(2) {
+    flex-basis: 15%;
+}
+
+footer .row .col:nth-child(3) p {
+    margin-bottom: 12px;
+    text-transform: capitalize;
+
+}
+
+footer .row .col i {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    margin-left: 8px;
+    cursor: pointer;
+    border: 1px solid #298;
+    text-align: center;
+    transition: 3s;
+
+
+}
+
+footer .row .col i:hover {
+    background: #298;
+}
+
+
+@media (max-width:700px) {
+    footer {
+        position: unset;
+    }
+
+    footer .row .col {
+        flex-basis: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+
+    }
+}

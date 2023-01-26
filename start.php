@@ -22,7 +22,7 @@
 
     <section id="thème">
 
-        <h1 style="margin-top:15px" ;> <strong> Quiz sur le thème choisie : </strong> <br><br>
+        <h1 style="margin-top:15px" ;> <strong> Quiz sur le thème choisie : <?=$_GET['theme']?></strong> <br><br>
 
         </h1>
 

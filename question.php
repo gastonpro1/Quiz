@@ -24,12 +24,10 @@
         unset($_COOKIE['id_question']);
         echo "Le cookie à été unset";
     }
+
     $sqlQuery = 'SELECT * FROM question WHERE Question_id = ? AND Question_idtheme = ?';
     $questionStatement = $db->prepare($sqlQuery);
 
-    echo "Valeur du cookie: " . $_COOKIE['id_question'] . "<br>";
-    echo "L'id du theme: " . $_GET['id'] . "<br>";
-    
     if(!empty($_COOKIE || $_COOKIE['id_question'] > 0 )) {
         $idQuestion = $_COOKIE['id_question'];
         $idQuestion++;
@@ -44,14 +42,10 @@
         setcookie("id_question", 0, time()+3600);
     }
     
-    echo "L'id question: " . $idQuestion . "<br>";
     
     $questionStatement->execute([$idQuestion, $_GET['id']]);
     $question = $questionStatement->fetch();
 
-    echo "Question: " . $question;
-
-    
 
 ?>
     <section class="qcm-foot">

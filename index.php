@@ -1,3 +1,21 @@
+<?php
+    try {
+        $db = new PDO(
+            'mysql:host=localhost;dbname=quiz;charset=utf8',
+            'root',
+            ''
+        );
+    } catch(Exception $e){
+        echo "erreur db";
+        die('Erreur : '.$e->getMessage());
+    }
+?>
+
+<?php
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,11 +43,16 @@
     <!-- Fin menu -->
 
     <section class="pseudo">
-        <form action="select.php" method="POST">
-            <p class="error"> <strong> Entrez votre pseudo ! </strong> </p>
-            <label> pseudo : </label>
-            <input type="text" name="name" placeholder="Ex: Goku">
-            <button href="#" class="style_btn"> Se connecter </button>
+        <form action="process/process_ajout_user.php" method="POST">
+            <p class="error"> 
+                <?php 
+                    //afficher l'erreur si elle existe 
+                    if(isset($error)) echo $error;
+                ?>    
+            </p>
+            <label> <strong> Entrez votre pseudo : <strong> </label>
+            <input type="text" name="pseudo" placeholder="Ex: Goku" autocomplete="off"> <br>
+            <input type="submit" value="Se connecter">
         </form>
     </section>
 

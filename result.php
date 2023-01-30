@@ -38,4 +38,5 @@
 
 
 </body>
+<?php include 'partials/footer.php' ?>
 </html>

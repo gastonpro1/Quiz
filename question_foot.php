@@ -31,9 +31,17 @@
             header("Location: result.php");
         }
 
+<<<<<<< HEAD:question_foot.php
         $idQuestion = $_GET['idQuestion'];
     } else {
         $idQuestion = 1;
+=======
+
+        $idQuestion = $_GET['idQuestion'];
+    } else {
+        $idQuestion = 1;
+     
+>>>>>>> 9b4fc4467e3902fd3bd9aa74cd94f3cb558d8dc5:question.php
     }
 
 
@@ -72,5 +80,9 @@
 
 
 </body>
+<<<<<<< HEAD:question_foot.php
 
+=======
+<?php include 'partials/footer.php' ?>
+>>>>>>> 9b4fc4467e3902fd3bd9aa74cd94f3cb558d8dc5:question.php
 </html>

@@ -29,12 +29,11 @@
          header("Location: result.php");
         }
 
-        echo "L'id Recup GET -> " . $_GET['idQuestion'] . "<br>";
-        echo "L'id de la question -> " . $_GET['idQuestion'] . "<br>";
+
         $idQuestion = $_GET['idQuestion'];
     } else {
         $idQuestion = 1;
-        echo "Pas de GET L'id de la question -> " . $idQuestion . "<br>";
+     
     }
 
 

@@ -21,8 +21,13 @@
     </div>
 
     <?php include 'utils/db_connect.php' ?>
-    <?php
 
+<div id="timer"> 
+
+
+</div>
+
+    <?php
     $idQuestion;
 
     if (isset($_GET['idQuestion']) || !empty($_GET['idQuestion'])) {
@@ -31,19 +36,11 @@
             header("Location: result.php");
         }
 
-<<<<<<< HEAD:question_foot.php
         $idQuestion = $_GET['idQuestion'];
     } else {
         $idQuestion = 1;
-=======
 
-        $idQuestion = $_GET['idQuestion'];
-    } else {
-        $idQuestion = 1;
-     
->>>>>>> 9b4fc4467e3902fd3bd9aa74cd94f3cb558d8dc5:question.php
     }
-
 
     // Récupération des questions avec le thème choisit
     $sqlQuery = 'SELECT * FROM question WHERE Question_id = ? AND Question_idtheme = ?';
@@ -55,7 +52,7 @@
     $idQuestion++;
     ?>
     <section class="qcm-foot">
-        <form action="question_foot?idTheme=<?= $_GET['idTheme'] ?>&&idQuestion=<?= $idQuestion ?>" method="POST">
+        <form action="question_foot.php?idTheme=<?= $_GET['idTheme'] ?>&&idQuestion=<?= $idQuestion ?>" method="POST">
 
             <ul>
 
@@ -80,9 +77,11 @@
 
 
 </body>
-<<<<<<< HEAD:question_foot.php
 
-=======
+
 <?php include 'partials/footer.php' ?>
->>>>>>> 9b4fc4467e3902fd3bd9aa74cd94f3cb558d8dc5:question.php
+
 </html>
+
+<script src="main.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

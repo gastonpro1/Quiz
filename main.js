@@ -1,3 +1,20 @@
+
+
+
+let timer = 30
+let timerId = setInterval(countdown, 1000);
+
+function countdown() {
+    if (timer == -1) {
+        clearTimeout(timerId);
+        document.querySelector('#timer').innerHTML = 'Votre temps est écoulé';
+    } else {
+        document.querySelector('#timer').innerHTML = timer;
+        timer--;
+    }
+}
+
+
 /* function changeColor(Question_id, reponseVouF, choix1, choix2, choix3) {
 
     console.log("Résultat: " + reponseVouF);

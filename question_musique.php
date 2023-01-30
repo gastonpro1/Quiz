@@ -21,19 +21,21 @@
     </div>
 
     <?php include 'utils/db_connect.php' ?>
-    <?php
-
+   
+    <div id="timer"> </div>
+   
+   <?php
     $numQuestion;
 
     if (isset($_GET['numquestion']) || !empty($_GET['numquestion'])) {
 
-        if ($_GET['numquestion'] == 9) {
+        if ($_GET['numquestion'] == 11) {
             header("Location: result.php");
         }
 
         $numQuestion = $_GET['numquestion'];
     } else {
-        $numQuestion = 0;
+        $numQuestion = 1;
     }
 
     // Récupération des questions avec le thème choisit
@@ -43,7 +45,6 @@
     $questionStatement->execute([$_GET['idTheme']]);
     $questions = $questionStatement->fetchAll();
 
-    echo count($questions);
     $numQuestion++;
 
     ?>
@@ -100,3 +101,6 @@
 </body>
 
 </html>
+
+<script src="main.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

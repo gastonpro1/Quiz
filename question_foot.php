@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,65 +11,66 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 </head>
+
 <body>
 
-<div class="menu">
-      
-      <h1> <strong> Panic QUIZ </strong> </h1>
-   
-  </div>
-  
- <?php include 'utils/db_connect.php'?>
- <?php
+    <div class="menu">
+
+        <h1> <strong> Panic QUIZ Football </strong> </h1>
+
+    </div>
+
+    <?php include 'utils/db_connect.php' ?>
+    <?php
 
     $idQuestion;
 
-    if(isset($_GET['idQuestion']) || !empty($_GET['idQuestion'])) {
+    if (isset($_GET['idQuestion']) || !empty($_GET['idQuestion'])) {
 
-        if($_GET['idQuestion'] == 11) {
-         header("Location: result.php");
+        if ($_GET['idQuestion'] == 11) {
+            header("Location: result.php");
         }
 
-        echo "L'id Recup GET -> " . $_GET['idQuestion'] . "<br>";
-        echo "L'id de la question -> " . $_GET['idQuestion'] . "<br>";
         $idQuestion = $_GET['idQuestion'];
     } else {
         $idQuestion = 1;
-        echo "Pas de GET L'id de la question -> " . $idQuestion . "<br>";
     }
 
 
     // Récupération des questions avec le thème choisit
     $sqlQuery = 'SELECT * FROM question WHERE Question_id = ? AND Question_idtheme = ?';
     $questionStatement = $db->prepare($sqlQuery);
-   
+
     $questionStatement->execute([$idQuestion, $_GET['idTheme']]);
     $question = $questionStatement->fetch();
 
     $idQuestion++;
-?>
+    ?>
     <section class="qcm-foot">
-        <form action="question.php?idTheme=<?= $_GET['idTheme'] ?>&&idQuestion=<?= $idQuestion ?>" method="POST">
+        <form action="question_foot?idTheme=<?= $_GET['idTheme'] ?>&&idQuestion=<?= $idQuestion ?>" method="POST">
 
-           <ul>
-        
-                <h3 class="question"> <li><?= $question['Question_contenue'] ?> </li> </h3>
-                
+            <ul>
+
+                <h3 class="question">
+                    <li><?= $question['Question_contenue'] ?> </li>
+                </h3>
+
                 <input type="radio" name="choix" required> VRAI <br>
                 <input type="radio" name="choix" required> FAUX <br>
 
                 <input type="submit" class="style_btn" value="Valider">
 
-             
-            
-        </ul>  
+
+
+            </ul>
 
         </form>
     </section>
 
-           
+
 
 
 
 </body>
+
 </html>

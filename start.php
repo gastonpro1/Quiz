@@ -22,12 +22,31 @@
 
     <section id="thème">
 
-        <h1 style="margin-top:15px" ;> <strong> Quiz sur le thème choisie : <?=$_GET['theme']?></strong> <br><br>
+        <h1 style="margin-top:15px" ;> <strong> Quiz sur le thème choisie : <?= $_GET['theme'] ?></strong> <br><br>
 
         </h1>
+        <?php
+        $theme = $_GET['theme'];
 
-        <a href="question.php?theme=<?= $_GET['theme'] ?>&&idTheme=<?= $_GET['idTheme'] ?>">
-            <button style="background-color:rgb(48, 173, 163);" type="button" class="btn btn-primary btn-lg "> Démarrer le Quiz </button> </a>
+        switch ($theme) {
+            case "football":
+        ?>
+                <a href="question_foot.php?theme=<?= $_GET['theme'] ?>&&idTheme=<?= $_GET['idTheme'] ?>">
+                <?php
+                break;
+            case "musique":
+                ?>
+                    <a href="question_musique.php?theme=<?= $_GET['theme'] ?>&&idTheme=<?= $_GET['idTheme'] ?>">
+                    <?php
+                    break;
+                case "animaux":
+                    ?>
+                        <a href="question_animaux.php?theme=<?= $_GET['theme'] ?>&&idTheme=<?= $_GET['idTheme'] ?>">
+                    <?php
+                    break;
+            }
+                    ?>
+                    <button style="background-color:rgb(48, 173, 163);" type="button" class="btn btn-primary btn-lg "> Démarrer le Quiz </button> </a>
 
     </section>
 

@@ -16,15 +16,16 @@
 
     <div class="menu">
 
+
         <h1> <strong> Panic QUIZ Musique</strong> </h1>
 
     </div>
 
     <?php include 'utils/db_connect.php' ?>
-   
+
     <div id="timer"> </div>
-   
-   <?php
+
+    <?php
     $numQuestion;
 
     if (isset($_GET['numquestion']) || !empty($_GET['numquestion'])) {
@@ -70,6 +71,10 @@
 
 
             </ul>
+
+            <div id="score-container">
+                <p>Score: 0</p>
+            </div>
 
         </form>
     </section>

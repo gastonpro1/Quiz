@@ -93,6 +93,10 @@
 
             </ul>
 
+                        <div id="score-container">
+                <p>Score: 0</p>
+            </div>
+
         </form>
     </section>
     -->
